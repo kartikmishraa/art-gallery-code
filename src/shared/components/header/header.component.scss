@@ -1,0 +1,32 @@
+header {
+  align-items: center;
+  //   padding: 2vmax 2vmax;
+  padding-top: 2vmax;
+  padding-left: 2vmax;
+  padding-right: 2vmax;
+  // gap: 1.6vmax;
+  justify-content: space-between;
+
+  div {
+    align-items: center;
+    gap: 1.6vmax;
+
+    h1 {
+      cursor: pointer;
+    }
+  }
+}
+
+.logo-container {
+  img {
+    height: 6vmax;
+    width: 6vmax;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-wrap: wrap;
+  }
+}

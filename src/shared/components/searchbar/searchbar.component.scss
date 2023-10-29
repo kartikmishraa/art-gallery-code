@@ -1,0 +1,17 @@
+$main-clr: #b50938;
+$alt-clr: #e1e4e6;
+
+.myInputField {
+  height: 1.8vmax;
+  width: 20vmax;
+  border-radius: 1.8vmax;
+  border: 1px solid $alt-clr;
+  padding: 0.8vmax;
+  font-size: 1.2vmax;
+}
+
+@media (max-width: 500px) {
+  .myInputField {
+    width: 80vmin;
+  }
+}
