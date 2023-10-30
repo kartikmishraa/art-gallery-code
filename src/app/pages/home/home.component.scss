@@ -11,13 +11,13 @@ $alt-clr: #e1e4e6;
 .title {
   font-size: 3vmax;
   margin-bottom: 3vmax;
-  letter-spacing: 1.6vmax;
+  letter-spacing: 1.4vmax;
   word-spacing: 0.8vmax;
   line-height: 3.6vmax;
 }
 .subtitle {
   font-size: 1.2vmax;
-  letter-spacing: 0.4vmax;
+  letter-spacing: 0.35vmax;
   line-height: 2vmax;
 }
 
@@ -27,4 +27,11 @@ $alt-clr: #e1e4e6;
   padding-left: 1.4vmax;
   gap: 1vmax;
   height: 100%;
+}
+
+.cards-container {
+  margin-top: 3vmax;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 3vmax;
 }

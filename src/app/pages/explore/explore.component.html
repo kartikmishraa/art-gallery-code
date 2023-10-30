@@ -1,0 +1,16 @@
+<div *ngIf="isLoading" class="flex center">
+  <mat-spinner color="warn"></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading" class="card-holder flex row">
+  <app-card-temp
+    *ngFor="let item of tempData"
+    title="{{ item.title }}"
+    imgSrc="https://www.artic.edu/iiif/2/{{
+      item.image_id
+    }}/full/843,/0/default.jpg"
+    subtitle="{{ item.artist_display }}"
+    artId="{{ item.id }}"
+  >
+  </app-card-temp>
+</div>
