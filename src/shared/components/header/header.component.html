@@ -1,9 +1,9 @@
 <header class="flex row">
   <div class="flex row">
     <div class="logo-container">
-      <img [src]="imgSource" alt="logo" />
+      <img [src]="imgSource" alt="logo" (click)="redirectToUrl('/')" />
     </div>
-    <h1>
+    <h1 (click)="redirectToUrl('/')">
       The <span appHighlightRed>Art</span> Institute of
       <span appHighlightRed>Chicago</span>
     </h1>

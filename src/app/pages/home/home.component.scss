@@ -1,0 +1,30 @@
+$main-clr: #b50938;
+$alt-clr: #e1e4e6;
+
+.container {
+  margin-top: 4vmax;
+  padding: 4vmax;
+  background-color: $alt-clr;
+  gap: 30px;
+  align-items: center;
+}
+.title {
+  font-size: 3vmax;
+  margin-bottom: 3vmax;
+  letter-spacing: 1.6vmax;
+  word-spacing: 0.8vmax;
+  line-height: 3.6vmax;
+}
+.subtitle {
+  font-size: 1.2vmax;
+  letter-spacing: 0.4vmax;
+  line-height: 2vmax;
+}
+
+.text-content {
+  border-left: 4px solid $main-clr;
+  padding-top: 0.8vmax;
+  padding-left: 1.4vmax;
+  gap: 1vmax;
+  height: 100%;
+}

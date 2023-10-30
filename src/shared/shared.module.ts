@@ -8,6 +8,6 @@ import { HighlightRedDirective } from './directives/highlight-red.directive';
 @NgModule({
   declarations: [HeaderComponent, SearchbarComponent, HighlightRedDirective],
   imports: [CommonModule, MaterialModule],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent, HighlightRedDirective],
 })
 export class SharedModule {}
