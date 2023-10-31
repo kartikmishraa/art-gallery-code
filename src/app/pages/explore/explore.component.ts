@@ -15,7 +15,7 @@ export class ExploreComponent implements OnInit {
   ngOnInit(): void {
     console.log('ngOnInit()');
 
-    this.dataService.getOnePage(1, 10).subscribe({
+    this.dataService.getOnePage(5, 40).subscribe({
       next: (val) => {
         console.log(val.data);
         this.tempData = val.data;

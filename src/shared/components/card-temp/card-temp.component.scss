@@ -1,15 +1,29 @@
+// Portrait Dimensions
+$height: 30vmax;
+$width: 25vmax;
+
+// Landscape Dimensions
+$height-alt: 25vmax;
+$width-alt: 45vmax;
+
+.portrait {
+  height: $height;
+  width: $width;
+  font-size: 1.2vmax;
+}
+.landscape {
+  height: $height-alt;
+  width: $width-alt;
+}
+
 .card-container {
   cursor: pointer;
   color: #ffffff;
-  height: 25vmax;
-  width: 45vmax;
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
     inset -6px -6px 10px 0 rgba(0, 0, 0, 0.5);
 
   img {
     position: absolute;
-    height: 25vmax;
-    width: 45vmax;
     z-index: -1;
   }
 }

@@ -2,7 +2,7 @@
   <mat-spinner color="warn"></mat-spinner>
 </div>
 
-<div *ngIf="!isLoading" class="card-holder flex row">
+<div *ngIf="!isLoading" class="card-holder flex row center">
   <app-card-temp
     *ngFor="let item of tempData"
     title="{{ item.title }}"

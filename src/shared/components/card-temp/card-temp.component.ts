@@ -13,4 +13,5 @@ export class CardTempComponent {
   @Input() subtitle: string = 'Subtitle';
   @Input() imgSrc: string = '';
   @Input() artId: string = '';
+  @Input() isAlt = false;
 }

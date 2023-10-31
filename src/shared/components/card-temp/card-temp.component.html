@@ -1,8 +1,13 @@
 <div
+  [ngClass]="isAlt ? 'landscape' : 'portrait'"
   class="card-container"
-  (click)="this.myRouter.redirectToUrl('artwork/:' + artId)"
+  (click)="this.myRouter.redirectToUrl('artwork/' + artId)"
 >
-  <img [src]="imgSrc" alt="card-img" />
+  <img
+    [src]="imgSrc"
+    alt="card-img"
+    [ngClass]="isAlt ? 'landscape' : 'portrait'"
+  />
   <div class="text-content">
     <h1 class="title">{{ title }}</h1>
     <p class="subtitle">
