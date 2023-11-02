@@ -13,25 +13,21 @@ export class ExploreComponent implements OnInit {
 
   pageEvent!: PageEvent;
   length = 100;
-  pageSize = 10;
+  pageSize = 6;
   pageIndex = 0;
-  pageSizeOptions = [5, 10];
+  pageSizeOptions = [6, 12, 24];
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    console.log('ngOnInit()');
-
     this.dataService.getOnePage(this.pageIndex, this.pageSize).subscribe({
       next: (val) => {
-        console.log(val.data);
         this.tempData = val.data;
       },
       error: (err) => {
         console.log(err);
       },
       complete: () => {
-        console.log('complete()');
         this.isLoading = false;
       },
     });
@@ -41,12 +37,6 @@ export class ExploreComponent implements OnInit {
     this.pageEvent = e;
     this.pageSize = e.pageSize;
     this.pageIndex = e.pageIndex;
-
-    console.log('handePageEvent()');
-    console.log('this.pageSize: ', this.pageSize);
-    console.log('e.pageSize: ', e.pageSize);
-    console.log('this.pageIndex: ', this.pageIndex);
-    console.log('e.pageIndex: ', e.pageIndex);
 
     this.isLoading = true;
     this.dataService.getOnePage(this.pageIndex, this.pageSize).subscribe({
