@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { RouterService } from 'src/shared/services/router.service';
 
 @Component({
-  selector: 'app-card-temp',
-  templateUrl: './card-temp.component.html',
-  styleUrls: ['./card-temp.component.scss'],
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss'],
 })
-export class CardTempComponent {
+export class CardComponent {
   constructor(public myRouter: RouterService) {}
 
   @Input() title: string = 'Card Title';

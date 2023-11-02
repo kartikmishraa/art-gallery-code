@@ -1,2 +1,8 @@
-<p>artwork works!</p>
-<h1>Art ID: {{ artId }}</h1>
+<div *ngIf="isLoading" class="flex center">
+  <mat-spinner color="warn"></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading">
+  <p>artwork works!</p>
+  <h1>Art ID: {{ artId }}</h1>
+</div>

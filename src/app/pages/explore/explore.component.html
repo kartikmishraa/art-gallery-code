@@ -2,15 +2,26 @@
   <mat-spinner color="warn"></mat-spinner>
 </div>
 
-<div *ngIf="!isLoading" class="card-holder flex row center">
-  <app-card-temp
-    *ngFor="let item of tempData"
-    title="{{ item.title }}"
-    imgSrc="https://www.artic.edu/iiif/2/{{
-      item.image_id
-    }}/full/843,/0/default.jpg"
-    subtitle="{{ item.artist_display }}"
-    artId="{{ item.id }}"
+<div *ngIf="!isLoading" class="flex column center">
+  <div class="card-holder flex row center">
+    <app-card
+      *ngFor="let item of tempData"
+      title="{{ item.title }}"
+      imgSrc="https://www.artic.edu/iiif/2/{{
+        item.image_id
+      }}/full/843,/0/default.jpg"
+      subtitle="{{ item.artist_display }}"
+      artId="{{ item.id }}"
+    >
+    </app-card>
+  </div>
+  <mat-paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageIndex]="pageIndex"
+    [pageSizeOptions]="pageSizeOptions"
+    aria-label="Select page"
+    (page)="handlePageEvent($event)"
   >
-  </app-card-temp>
+  </mat-paginator>
 </div>

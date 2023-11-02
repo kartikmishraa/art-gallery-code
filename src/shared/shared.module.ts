@@ -4,16 +4,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { MaterialModule } from 'src/material/material.module';
 import { HighlightRedDirective } from './directives/highlight-red.directive';
-import { CardTempComponent } from './components/card-temp/card-temp.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     SearchbarComponent,
     HighlightRedDirective,
-    CardTempComponent,
+    CardComponent,
   ],
   imports: [CommonModule, MaterialModule],
-  exports: [HeaderComponent, HighlightRedDirective, CardTempComponent],
+  exports: [HeaderComponent, HighlightRedDirective, CardComponent],
 })
 export class SharedModule {}
