@@ -9,8 +9,9 @@ import { DataService } from 'src/shared/services/data.service';
 })
 export class ExploreComponent implements OnInit {
   isLoading = true;
-  tempData: any;
+  data: any;
 
+  // Paginator Properties
   pageEvent!: PageEvent;
   length = 100;
   pageSize = 6;
@@ -20,9 +21,12 @@ export class ExploreComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    /**
+     * @description Initial Data Fetch
+     */
     this.dataService.getOnePage(this.pageIndex, this.pageSize).subscribe({
       next: (val) => {
-        this.tempData = val.data;
+        this.data = val.data;
       },
       error: (err) => {
         console.log(err);
@@ -33,6 +37,10 @@ export class ExploreComponent implements OnInit {
     });
   }
 
+  /**
+   * @description Pagination
+   * @param e The PageEvent being fired by Mat-Paginator
+   */
   handlePageEvent(e: PageEvent) {
     this.pageEvent = e;
     this.pageSize = e.pageSize;
@@ -41,7 +49,7 @@ export class ExploreComponent implements OnInit {
     this.isLoading = true;
     this.dataService.getOnePage(this.pageIndex, this.pageSize).subscribe({
       next: (val) => {
-        this.tempData = val.data;
+        this.data = val.data;
       },
       error: (err) => console.log(err),
       complete: () => (this.isLoading = false),

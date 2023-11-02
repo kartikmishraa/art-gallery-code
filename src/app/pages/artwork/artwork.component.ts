@@ -15,13 +15,17 @@ export class ArtworkComponent implements OnInit {
 
   artId: string = '';
   artObject: any;
+  imgSrc!: string;
   isLoading = true;
 
   ngOnInit(): void {
+    /**
+     * @description Fetches single artwork details from the API
+     */
     this.dataService.getOneArtwork(this.artId).subscribe({
       next: (val) => {
         this.artObject = val.data;
-        console.log(this.artObject);
+        this.imgSrc = `https://www.artic.edu/iiif/2/${this.artObject.image_id}/full/843,/0/default.jpg`;
       },
       error: (err) => {
         console.log(err);

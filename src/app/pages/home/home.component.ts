@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { RouterService } from 'src/shared/services/router.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(private router: Router) {}
-
-  redirectToUrl(url: string): void {
-    this.router.navigateByUrl(url);
-  }
+  constructor(public myRouter: RouterService) {}
 }

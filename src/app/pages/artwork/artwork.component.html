@@ -2,7 +2,14 @@
   <mat-spinner color="warn"></mat-spinner>
 </div>
 
-<div *ngIf="!isLoading">
-  <p>artwork works!</p>
-  <h1>Art ID: {{ artId }}</h1>
+<div *ngIf="!isLoading" style="margin-top: 2rem; margin-left: 2rem">
+  <div class="container flex row" style="gap: 20px">
+    <img [src]="imgSrc" alt="img" height="300px" width="500px" />
+    <div class="flex column" style="width: 40%">
+      <h1 appHighlightRed>{{ artObject.title }}</h1>
+      <div style="width: 100%; height: 2px; background-color: black"></div>
+      <br />
+      <p>{{ artObject.artist_display }}</p>
+    </div>
+  </div>
 </div>
